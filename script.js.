@@ -1,0 +1,13 @@
+const books = [
+    { title: "Book 1", url: "https://example.com/book1.pdf" },
+    { title: "Book 2", url: "https://example.com/book2.pdf" },
+    { title: "Book 3", url: "https://example.com/book3.pdf" }
+];
+
+const bookList = document.getElementById("book-list");
+
+books.forEach(book => {
+    const bookItem = document.createElement("div");
+    bookItem.innerHTML = `<a href="${book.url}" target="_blank">${book.title}</a>`;
+    bookList.appendChild(bookItem);
+});
